@@ -1,10 +1,11 @@
-// app/@modal/(.)preview/page.tsx
 "use client";
 
+import { Suspense } from "react"; // 👈 これを追加
 import { useRouter, useSearchParams } from "next/navigation";
 import { GoalModal } from "@/components/GoalModal";
 
-export default function PreviewModal() {
+
+function PreviewContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const goal = searchParams.get("goal") || "";
@@ -20,5 +21,14 @@ export default function PreviewModal() {
       goalTitle={goal} 
       onClose={handleClose} 
     />
+  );
+}
+
+export default function PreviewModal() {
+  return (
+
+    <Suspense fallback={null}>
+      <PreviewContent />
+    </Suspense>
   );
 }
