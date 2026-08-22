@@ -113,7 +113,7 @@ function WikiViewerContent() {
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-xl font-bold mb-6 text-gray-800"><Link href="./start-display">Wikipedia Golf</Link></h1>
+        <h1 className="text-xl font-bold mb-6 text-gray-800"><Link href="/">Wikipedia Golf</Link></h1>
 
         <WikiHeader StartTitle = {startPage} title={currentPage}  GoalTitle={goalPage} onUndo={handleUndo} canUndo={history.length > 1} />
 

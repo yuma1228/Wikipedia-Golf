@@ -13,7 +13,7 @@ export const Hero = () => {
 
       {/* 説明文 */}
       <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-lg leading-relaxed">
-        Wikipediaのリンクをたどり、
+        ウィキペディアゴルフ ― Wikipediaのリンクをたどり、
         <br className="hidden md:block" />
         最短ルートでゴールを目指そう。
       </p>
@@ -37,6 +37,31 @@ export const Hero = () => {
         <GameForm />
 
       </div>
+
+      {/* 検索エンジン向けの説明文（テキストが無いと日本語クエリで拾われない） */}
+      <section className="mt-20 max-w-2xl text-left text-gray-600 leading-relaxed space-y-6">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            Wikipedia Golf（ウィキペディアゴルフ）とは
+          </h2>
+          <p>
+            Wikipedia Golf は、Wikipediaの記事の中にあるリンクだけをたどって、
+            スタートの記事からゴールの記事まで何手でたどり着けるかを競う無料のブラウザゲームです。
+            海外では Wikiracing や Wiki Game とも呼ばれています。
+            インストールも会員登録も不要で、スマホからもすぐに遊べます。
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">遊び方・ルール</h2>
+          <ol className="list-decimal list-inside space-y-2">
+            <li>スタートとゴールの2つのWikipedia記事が決まります（ランダム／自分で指定）。</li>
+            <li>記事の中のリンクをクリックして、次の記事へ移動します。</li>
+            <li>検索やURL直打ちは使わず、リンクだけをたどります。</li>
+            <li>ゴールの記事にたどり着くまでのクリック数が少ないほど好スコアです。</li>
+          </ol>
+        </div>
+      </section>
     </main>
   );
 };
